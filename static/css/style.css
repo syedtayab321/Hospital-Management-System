@@ -1,0 +1,112 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+   /* Navbar Animation */
+   @keyframes slideIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .navbar {
+    animation: slideIn 1s ease-out;
+    width: 90%;
+    border-radius: 7px;
+  }
+  /* Navbar Customization */
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #ffc107;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item .nav-link {
+      font-size: 1rem;
+    }
+  }
+  main{
+    width: 100%;
+    height: 100vh;
+    background:url('/static/images/bg.jpg') no-repeat center center;
+    background-size:cover ;
+    background-attachment: fixed;
+    padding: 20px;
+  }
+.section-1{
+    width: 100%;
+    height: 80%;
+    animation: slideIn 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+  }
+
+  .heading {
+    text-align: center;
+  }
+  /* about us */
+  .jumbotron {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .jumbotron h1 {
+    text-align: center;
+  }
+
+  .alert {
+    margin: 0px;
+  }
+
+  /* portals */
+  .section-2{
+    width: 100%;
+    min-height: 600px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: url('/static/images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  .section-2 a p{
+    color: white;
+    text-decoration: none;
+  }
+
+  .section-2 a:hover{
+          scale: 1.1;
+          transition: 1s all ease-in-out;
+  }
+  @media (max-width:615px){
+    .section-2 a{
+      margin: 10px;
+    }
+  }
+    /* Custom CSS for styling */
+   

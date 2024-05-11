@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOSPITAL MANAGMENT SYSTEM</title>
+  <!-- main css file -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- main page -->
+<main>
+  <div class="section-1">
+    <!-- navbar -->
+    {% include 'assets/navbar.html' %}
+    <!-- center text -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="heading">
+            <h1 class="display-4">Welcome to Our Hospital </h1>
+            <p class="lead">This is a responsive heading with a description centered on the page.</p>
+            <a href="#" class="btn btn-primary btn-lg">MAKE APPOINTMENT</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+ <!-- Portals -->
+ <div class="section-2">
+      <a href="{% url 'admin_login' %}">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/images/admin.png" class="card-img-top" alt="...">
+          <div class="card-body bg-dark">
+            <p class="card-text">Click Here to Went to the Admin Portal Login Page for More Information</p>
+          </div>
+        </div>
+      </a>
+      <a href="http://">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/images/doctor.png" class="card-img-top" alt="...">
+          <div class="card-body bg-dark">
+            <p class="card-text" >Click Here to Went to the Doctor Portal Login Page for More Information</p>
+          </div>
+        </div>
+      </a>
+      <a href="http://">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/images/patient.jpg" class="card-img-top" alt="...">
+          <div class="card-body bg-dark">
+            <p class="card-text">Click Here to Went to the Patient Portal Login Page for More Information</p>
+          </div>
+        </div>
+      </a> 
+ </div>
+<!-- about us -->
+  <br><br>
+  <center>
+    <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
+  </center>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <h1 class="display-4">Hello</h1>
+    <p class="lead">A service dedicated to Hospital Admin, Doctor and Patient.</p>
+    <hr class="my-4">
+    <p>Explore our Website.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">HOME</a>
+    </p>
+  </div>
+  <!-- contact us form-->
+  {% include 'assets/contactus.html' %}
+  <!-- footer -->
+  {% include "assets/footer.html" %}
+<!-- Bootstrap JS (optional) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/static/js/script.js"></script>
+</body>
+</html>
+
+  
+
+    

@@ -1,0 +1,99 @@
+.contact-container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.contact-container .heading {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(11, 183, 231, 0.93);
+  color: rgb(6, 6, 6);
+  letter-spacing: 10px;
+}
+.contact-form {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-form .left-side {
+  width: 49%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+}
+.contact-form .left-side p {
+  text-align: justify;
+}
+.contact-form .right-side {
+  width: 49%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form .right-side form {
+  width: 85%;
+  height: 86%;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.355);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.contact-form .right-side form > div {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form .right-side form > div > input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.355);
+  padding: 4px;
+}
+.contact-form .right-side form > .row1 {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form .right-side form .row1 #username,
+#date {
+  width: 48%;
+}
+@media (max-width: 850px) {
+  .contact-form {
+    flex-direction: column;
+  }
+  .contact-form .left-side {
+    width: 97%;
+    height: 30%;
+  }
+  .contact-container .contact-form .right-side {
+    width: 100%;
+    height: 70%;
+  }
+  .contact-container {
+    height: 850px;
+  }
+  .contact-container .heading{
+    height: 10%;
+  }
+}

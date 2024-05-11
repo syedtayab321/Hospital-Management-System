@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Dropdown Button</title>
+</head>
+<body>
+  <div class="side-bar">
+    <!-- item1 or header of sidebar -->
+    <div class="item1">
+      <img src="/static/images/logo.png" alt="logo here" srcset="" />
+    </div>
+    <!-- item2 bottom of sidebar -->
+    <div class="item2">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item" style="margin: 5px;">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Admin Portal
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <button onclick="showTable('table1')" class="btn btn-primary">ADMIN DETAILS</button>
+            </div>
+          </div>
+        </div>
+        <!-- acoordion 2 -->
+        <div class="accordion-item" style="margin: 5px;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+              Patient Portal
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                <label class="btn btn-primary" for="btncheck1" onclick="showTable('table2')">Details</label>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Patient</button>
+                {% include 'admin_related/registration_forms/add_patient_form.html' %}
+            </div>
+          </div>
+        </div>
+        <!-- accordion 3 -->
+        <div class="accordion-item" style="margin: 5px;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Doctor Portal
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+              <label class="btn btn-primary" for="btncheck1" onclick="showTable('table3')">Details</label>
+
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Add Doctor</button>
+                {% include 'admin_related/registration_forms/add_doctor_form.html' %}
+            </div>
+          </div>
+        </div>
+        <!-- accordion 4 -->
+        <div class="accordion-item" style="margin: 5px;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Appointments
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+              <label class="btn btn-primary" for="btncheck1" onclick="showTable('table4')">Details</label>
+            </div>
+          </div>
+        </div>
+        <!-- accordion 5 -->
+        <div class="accordion-item" style="margin: 5px;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Rooms
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+              <label class="btn btn-primary" for="btncheck1" onclick="showTable('table5')">Details</label>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Add Patient</button>
+                {% include 'admin_related/registration_forms/add_room_form.html' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="humburger" onclick="show_sidebar()">
+      <div class="line1 line"></div>
+      <div class="line2 line"></div>
+      <div class="line3 line"></div>
+   </div>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/admin_dashboard.css" />
+  </head>
+  <body>
+    <!-- dashboard -->
+    <div class="main">
+      <!-- sidebar -->
+      {% include 'admin_related/sidebar.html' %}
+      <!-- main section -->
+      <div class="main-section">
+        <div class="heading">
+          <h1>Admin Dashboard</h1>
+        </div>
+        <div class="table-data">{% include 'admin_related/tables.html' %}</div>
+        <!-- logout button -->
+        <div class="logout">
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+           LOGOUT
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">LOGOUT</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ARE YOU SURE YOU WANT TO LOGOUT
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">CANCEL</button>
+                  <button type="button" class="btn btn-danger">CONFIRM</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- Bootstrap JS (optional) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- navbar responsive code -->
+    <script>
+      var sidebars = document.getElementsByClassName("side-bar");
+      var line2= document.getElementsByClassName("line2");
+      var line1= document.getElementsByClassName("line1");
+      var line3= document.getElementsByClassName("line3");
+      function show_sidebar() {
+        // Loop through each element with the class 'side-bar'
+        for (var i = 0; i < sidebars.length; i++) {
+          // Toggle the 'responsive-sidebar' class for each element
+          sidebars[i].classList.toggle("responsive-sidebar");
+        }
+      }
+    </script>
+  </body>
+</html>
